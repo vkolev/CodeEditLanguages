@@ -163,6 +163,15 @@
       }
     },
     {
+      "identity" : "tree-sitter-mermaid",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/vkolev/tree-sitter-mermaid",
+      "state" : {
+        "branch" : "master",
+        "revision" : "685e763aa1ffd3edc9d6a869b2eb7fa1f297fea6"
+      }
+    },
+    {
       "identity" : "tree-sitter-objc",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/lukepistrol/tree-sitter-objc",

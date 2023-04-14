@@ -29,6 +29,7 @@ public extension CodeLanguage {
         .jsx,
         .kotlin,
         .lua,
+        .mermaid,
         .objc,
         .ocaml,
         .ocamlInterface,
@@ -175,6 +176,12 @@ public extension CodeLanguage {
         extensions: ["lua"],
         highlights: ["injections"]
     )
+    
+    /// A language structure for `Mermaid.js`
+    static let mermaid: CodeLanguage = .init(
+        id: .mermaid,
+        tsName: "mermaid",
+        extensions: ["mmd", "mermaid"])
 
     /// A language structure for `Objective C`
     static let objc: CodeLanguage = .init(

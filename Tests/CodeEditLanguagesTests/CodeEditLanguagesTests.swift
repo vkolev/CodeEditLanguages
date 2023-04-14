@@ -404,6 +404,32 @@ final class CodeEditLanguagesTests: XCTestCase {
         XCTAssertNotNil(query)
         XCTAssertNotEqual(query?.patternCount, 0)
     }
+    
+    // MARK: - Mermaid
+    
+    func test_CodeLanguageMermaid() throws {
+        let url = URL(fileURLWithPath: "~/path/to/file.mmd")
+        let language = CodeLanguage.detectLanguageFrom(url: url)
+        
+        XCTAssertEqual(language.id, .mermaid)
+    }
+    
+    func test_codeLanguageMermaid2() throws {
+        let url = URL(fileURLWithPath: "~/path/to/file.mermaid")
+        let language = CodeLanguage.detectLanguageFrom(url: url)
+        
+        XCTAssertEqual(language.id, .mermaid)
+    }
+    
+    func test_fetchQueryMermaid() throws {
+        var language = CodeLanguage.mermaid
+        language.resourceURL = bundleURL
+        
+        let data = try Data(contentsOf: language.queryURL!)
+        let query = try? Query(language: language.language!, data: data)
+        XCTAssertNotNil(query)
+        XCTAssertNotEqual(query?.patternCount, 0)
+    }
 
 // MARK: - Objective C
 

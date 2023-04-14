@@ -55,6 +55,15 @@
       }
     },
     {
+      "identity" : "tree-sitter-d2",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/vkolev/tree-sitter-d2",
+      "state" : {
+        "branch" : "main",
+        "revision" : "be448b0488a100af8ec6a7184372aa5ae3176cb9"
+      }
+    },
+    {
       "identity" : "tree-sitter-dart",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/lukepistrol/tree-sitter-dart.git",

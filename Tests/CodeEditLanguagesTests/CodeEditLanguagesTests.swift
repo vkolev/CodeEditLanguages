@@ -129,8 +129,27 @@ final class CodeEditLanguagesTests: XCTestCase {
         XCTAssertNotNil(query)
         XCTAssertNotEqual(query?.patternCount, 0)
     }
+    
+// MARK: - D2
+    
+    func test_CodeLanguageD2() throws {
+        let url = URL(fileURLWithPath: "~/path/to/file.d2")
+        let language = CodeLanguage.detectLanguageFrom(url: url)
+        
+        XCTAssertEqual(language.id, .d2)
+    }
+    
+    func test_FetchQueryD2() throws {
+        var language = CodeLanguage.d2
+        language.resourceURL = bundleURL
+        
+        let data = try Data(contentsOf: language.queryURL!)
+        let query = try? Query(language: language.language!, data: data)
+        XCTAssertNotNil(query)
+        XCTAssertNotEqual(query?.patternCount, 0)
+    }
 
-// MARK: - CSS
+// MARK: - Dart
 
     func test_CodeLanguageDart() throws {
         let url = URL(fileURLWithPath: "~/path/to/file.dart")

@@ -16,6 +16,7 @@ public extension CodeLanguage {
         .cpp,
         .cSharp,
         .css,
+        .d2,
         .dart,
         .dockerfile,
         .elixir,
@@ -78,6 +79,13 @@ public extension CodeLanguage {
         id: .css,
         tsName: "css",
         extensions: ["css"]
+    )
+    
+    /// A language structure for `D2`
+    static let d2: CodeLanguage = .init(
+        id: .d2,
+        tsName: "d2",
+        extensions: ["d2"]
     )
 
     /// A language structure for `Dart`

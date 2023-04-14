@@ -30,6 +30,8 @@ public class TreeSitterModel {
             return cSharpQuery
         case .css:
             return cssQuery
+        case .d2:
+            return d2Query
         case .dart:
             return dartQuery
         case .dockerfile:
@@ -108,6 +110,11 @@ public class TreeSitterModel {
     /// Query for `CSS` files.
     public private(set) lazy var cssQuery: Query? = {
         return queryFor(.css)
+    }()
+    
+    /// Query for `D2` files.
+    public private(set) lazy var d2Query: Query? = {
+        return queryFor(.d2)
     }()
 
     /// Query for `Dart` files.
